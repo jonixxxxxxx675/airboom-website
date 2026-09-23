@@ -13,6 +13,21 @@ section{padding:70px 0}.heading{display:flex;align-items:end;justify-content:spa
 .split{display:grid;grid-template-columns:.9fr 1.35fr .95fr;gap:22px}.why,.quote{background:var(--cream);padding:25px;border-radius:17px}.why h2,.quote h2{font-size:31px;line-height:1.05;margin:9px 0 22px}.reason{display:flex;gap:12px;margin:18px 0}.ico{height:38px;width:38px;border:1px solid #ded3d1;border-radius:50%;display:grid;place-items:center;font-size:21px;flex-shrink:0}.reason h3{font-size:13px;margin:2px 0 5px}.reason p{font-size:12px;color:var(--muted);line-height:1.5;margin:0}.gallery{display:grid;grid-template-columns:1.2fr 1fr 1fr;grid-template-rows:repeat(2,135px);gap:9px}.shot{padding:0;border:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#eee}.shot:first-child{grid-row:span 2}.shot img{width:100%;height:100%;object-fit:cover;display:block;transition:.3s}.shot:hover img{transform:scale(1.06)}.field{width:100%;padding:12px 13px;border:1px solid #e6dcda;background:white;border-radius:8px;margin:5px 0;font-size:12px;outline:none}.field:focus{border-color:var(--pink);box-shadow:0 0 0 3px #d96d8320}textarea.field{min-height:82px;resize:vertical}.quote>p{font-size:12px;color:var(--muted);line-height:1.5}.quote button{width:100%;margin-top:6px}.status{display:none;font-size:12px;color:#a33d55;line-height:1.5;margin-top:10px}.reviews{background:#fbf8f7}.reviewgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.review{padding:22px;background:#fff;border:1px solid var(--line);border-radius:13px}.stars{color:#d9a144;letter-spacing:2px}.review blockquote{font:17px/1.45 Georgia,serif;margin:13px 0 20px}.review strong{font-size:12px}.review small{display:block;color:#888;font-size:11px;margin-top:4px}.cta{margin-top:25px;border-radius:15px;background:linear-gradient(100deg,#f6e1e5,#faf5f2);padding:25px 30px;display:flex;align-items:center;justify-content:space-between;gap:20px}.cta h3{font:28px Georgia,serif;margin:0 0 6px}.cta p{margin:0;color:var(--muted);font-size:12px}.footer{padding:45px 0 18px}.footgrid{display:grid;grid-template-columns:1.3fr .7fr 1fr 1.1fr;gap:30px}.footer h4{font-size:13px;margin:0 0 13px}.footer p,.footer a{font-size:12px;line-height:1.8;color:#71696d}.footer a{display:block}.footer a:hover{color:var(--pink)}.social{display:flex;gap:8px;margin-top:10px}.social a{width:29px;height:29px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;font-weight:bold}.newsletter{display:flex;gap:5px}.newsletter input{min-width:0;flex:1;border:1px solid var(--line);border-radius:30px;padding:11px;font-size:11px}.newsletter button{border:0;background:var(--pink);color:white;border-radius:50%;width:38px;cursor:pointer}.bottom{border-top:1px solid var(--line);padding-top:15px;margin-top:28px;display:flex;justify-content:space-between;gap:15px;font-size:10px;color:#898184}.lightbox{position:fixed;inset:0;background:#151216ed;z-index:30;display:none;align-items:center;justify-content:center;padding:20px}.lightbox.open{display:flex}.lightbox img{max-width:95%;max-height:85vh;border-radius:12px}.lightbox button{position:absolute;right:20px;top:20px;border:1px solid #fff8;background:#ffffff18;color:white;border-radius:50%;width:43px;height:43px;font-size:25px;cursor:pointer}
 @media(max-width:1000px){.links{gap:12px}.cards{grid-template-columns:repeat(3,1fr)}.split{grid-template-columns:1fr 1.2fr}.quote{grid-column:span 2}.footgrid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:700px){.wrap{width:calc(100% - 30px)}.nav{height:64px}.links,.navright>.btn,.navright>.round{display:none}.menu{display:block}.hero,.hero .wrap{min-height:570px}.hero{background-position:center}.hero h1{font-size:clamp(45px,13vw,64px)}.hero p{font-size:14px}.badge{width:95px;height:95px;font-size:16px;right:5%;top:5%}.copy{padding:65px 0 38px}.pills{gap:14px;font-size:10px}.section{padding:50px 0}.heading{align-items:start;flex-direction:column}.heading h2{font-size:34px}.cards{grid-template-columns:repeat(2,1fr);gap:9px}.cat img{height:135px}.split{grid-template-columns:1fr;gap:15px}.quote{grid-column:auto}.gallery{grid-template-rows:repeat(2,110px);gap:7px}.reviewgrid{grid-template-columns:1fr}.cta{padding:23px;align-items:flex-start;flex-direction:column}.footgrid{grid-template-columns:1fr 1fr;gap:24px 15px}.footgrid>div:first-child,.footgrid>div:last-child{grid-column:1/-1}.bottom{flex-direction:column}}
+
+/* Category details open in a responsive in-page dialog instead of a tiny about:blank tab. */
+.detail-overlay{position:fixed;inset:0;z-index:100;background:rgba(20,18,20,.78);display:none;align-items:flex-start;justify-content:center;overflow-y:auto;padding:clamp(12px,4vw,36px)}
+.detail-overlay.open{display:flex}
+.detail-dialog{position:relative;width:min(860px,100%);margin:auto;background:#faf6f4;border-radius:18px;overflow:hidden;box-shadow:0 24px 80px #0005}
+.detail-close{position:absolute;z-index:2;top:12px;right:12px;width:42px;height:42px;border:1px solid #fff9;border-radius:50%;background:#19181bcc;color:white;font-size:27px;cursor:pointer}
+.detail-dialog>img{width:100%;height:clamp(210px,42vw,430px);object-fit:cover;display:block}
+.detail-content{padding:clamp(20px,5vw,44px)}
+.detail-content h2{font:500 clamp(30px,5vw,48px)/1.08 Georgia,serif;margin:12px 0 18px;color:#19181b}
+.detail-content p{font-size:15px;line-height:1.75;color:#71696d}
+.detail-content h3{font:500 26px Georgia,serif;margin:26px 0 12px}
+.detail-content ul{padding-left:22px;color:#514b4e;line-height:1.9}
+.detail-content .btn{margin-top:15px}
+@media(max-width:600px){.detail-overlay{padding:8px}.detail-dialog{border-radius:12px}.detail-content p{font-size:14px}}
+
 </style>
 </head>
 <body>
@@ -62,6 +77,23 @@ section{padding:70px 0}.heading{display:flex;align-items:end;justify-content:spa
 <div><h4>Bądź na bieżąco!</h4><p>Zapisz się do newslettera, aby otrzymywać inspiracje i nowości.</p><form class="newsletter" id="newsletter"><input type="email" required placeholder="Twój e-mail" aria-label="Twój e-mail"><button type="submit" aria-label="Zapisz się">→</button></form></div>
 </div><div class="bottom"><span>© <span id="year"></span> AirBoom. Wszelkie prawa zastrzeżone.</span><span>Realizacja: Beego Digital · IDEAS MOVE BUSINESS.</span></div></div></footer>
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Podgląd zdjęcia"><button id="closeLightbox" aria-label="Zamknij">×</button><img id="largeImg" alt="Powiększone zdjęcie dekoracji"></div>
+
+<div class="detail-overlay" id="detailOverlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="detailTitle">
+  <article class="detail-dialog">
+    <button class="detail-close" id="detailClose" type="button" aria-label="Zamknij">×</button>
+    <img id="detailImage" src="" alt="">
+    <div class="detail-content">
+      <div class="eyebrow">AirBoom · Bielsko-Biała i okolice</div>
+      <h2 id="detailTitle"></h2>
+      <p id="detailDescription"></p>
+      <h3>Co możemy przygotować?</h3>
+      <ul id="detailList"></ul>
+      <p>Każdy projekt wyceniamy indywidualnie. Skontaktuj się z nami, aby omówić szczegóły swojej uroczystości.</p>
+      <a class="btn primary" id="detailQuote" href="#wycena">Poproś o wycenę ↗</a>
+    </div>
+  </article>
+</div>
+
 <script>
 const menuBtn=document.getElementById('menuBtn'),mobile=document.getElementById('mobile');
 menuBtn.addEventListener('click',()=>{let opened=mobile.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(opened));menuBtn.textContent=opened?'×':'☰';});
@@ -79,21 +111,31 @@ const eventDetails = {
   "Event firmowy": { title: "Dekoracje na eventy firmowe", description: "Dekoracje balonowe na wydarzenia firmowe, spotkania, otwarcia i uroczystości. Dopasowujemy aranżacje do charakteru wydarzenia oraz identyfikacji wizualnej marki.", details: ["Dekoracje dopasowane do charakteru wydarzenia", "Możliwość dopasowania kolorystyki do marki", "Aranżacje do wybranych stref eventowych", "Indywidualna wycena zależna od projektu"] }
 };
 
-document.querySelectorAll('.cat').forEach(card => {
-  card.addEventListener('click', () => {
-    const occasion = card.dataset.occasion;
-    const event = eventDetails[occasion];
-    if (!event) return;
-    const image = new URL(card.querySelector('img').getAttribute('src'), window.location.href).href;
-    const message = encodeURIComponent(`Dzień dobry! Proszę o wycenę dekoracji AirBoom.\nOkazja: ${occasion}`);
-    const tab = window.open('', '_blank');
-    if (!tab) { alert('Zezwól na otwieranie nowych kart w przeglądarce.'); return; }
-    tab.document.write(`<!doctype html><html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AirBoom — ${event.title}</title><style>
-      *{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#19181b;background:#faf6f4}a{text-decoration:none}.top{background:white;border-bottom:1px solid #e9e0df;padding:18px 5%}.logo{font-size:25px;font-weight:bold;letter-spacing:-1.5px;color:#19181b}.logo span{color:#d96d83}main{max-width:1000px;margin:45px auto;padding:0 22px}.panel{background:white;border:1px solid #e9e0df;border-radius:18px;overflow:hidden}img{display:block;width:100%;max-height:480px;object-fit:cover}.content{padding:clamp(22px,5vw,48px)}.eyebrow{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:#d96d83;font-weight:bold}h1{font:500 clamp(32px,6vw,52px)/1.08 Georgia,serif;margin:14px 0 20px}p{font-size:16px;line-height:1.8;color:#71696d}h2{font:500 27px Georgia,serif;margin-top:30px}ul{padding-left:22px;color:#514b4e;line-height:2}.btn{display:inline-block;margin-top:20px;padding:14px 24px;background:#d96d83;color:white;border-radius:40px;font-weight:bold;font-size:14px}.btn:hover{background:#c65770}footer{text-align:center;padding:25px;color:#71696d;font-size:12px}
-      </style></head><body><header class="top"><a class="logo" href="${window.location.href}">Air<span>Boom</span></a></header><main><article class="panel"><img src="${image}" alt="${event.title}"><div class="content"><div class="eyebrow">AirBoom · Bielsko-Biała i okolice</div><h1>${event.title}</h1><p>${event.description}</p><h2>Co możemy przygotować?</h2><ul>${event.details.map(item=>`<li>${item}</li>`).join('')}</ul><p>Każdy projekt wyceniamy indywidualnie. Skontaktuj się z nami, aby omówić szczegóły swojej uroczystości.</p><a class="btn" href="https://wa.me/48798015723?text=${message}" target="_blank" rel="noreferrer">Poproś o wycenę ↗</a></div></article></main><footer>© ${new Date().getFullYear()} AirBoom · Dekoracje z pasją</footer></body></html>`);
-    tab.document.close();
+const detailOverlay=document.getElementById('detailOverlay');
+const closeDetail=()=>{detailOverlay.classList.remove('open');detailOverlay.setAttribute('aria-hidden','true');document.body.style.overflow='';};
+document.querySelectorAll('.cat').forEach(card=>{
+  card.addEventListener('click',()=>{
+    const occasion=card.dataset.occasion;
+    const event=eventDetails[occasion];
+    if(!event)return;
+    const image=card.querySelector('img');
+    document.getElementById('detailImage').src=image.getAttribute('src');
+    document.getElementById('detailImage').alt=image.alt||event.title;
+    document.getElementById('detailTitle').textContent=event.title;
+    document.getElementById('detailDescription').textContent=event.description;
+    const list=document.getElementById('detailList');list.replaceChildren();
+    event.details.forEach(text=>{const li=document.createElement('li');li.textContent=text;list.appendChild(li);});
+    const message=encodeURIComponent(`Dzień dobry! Proszę o wycenę dekoracji AirBoom.\nOkazja: ${occasion}`);
+    document.getElementById('detailQuote').href='https://wa.me/48517123456?text='+message;
+    document.getElementById('detailQuote').target='_blank';
+    document.getElementById('detailQuote').rel='noreferrer';
+    detailOverlay.classList.add('open');detailOverlay.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';
+    document.getElementById('detailClose').focus();
   });
 });
+document.getElementById('detailClose').addEventListener('click',closeDetail);
+detailOverlay.addEventListener('click',e=>{if(e.target===detailOverlay)closeDetail();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&detailOverlay.classList.contains('open'))closeDetail();});
 document.getElementById('quoteForm').addEventListener('submit',e=>{e.preventDefault();let d=new FormData(e.currentTarget);let text=`Dzień dobry! Proszę o wycenę dekoracji AirBoom.\nImię: ${d.get('name')}\nTelefon: ${d.get('phone')}\nOkazja: ${d.get('occasion')||'nie podano'}\nData: ${d.get('date')||'nie podano'}\nSzczegóły: ${d.get('details')||'nie podano'}`;let status=document.getElementById('formStatus');status.style.display='block';status.textContent='Otwieramy WhatsApp z przygotowaną wiadomością. Sprawdź jej treść i naciśnij Wyślij.';window.open('https://wa.me/48517123456?text='+encodeURIComponent(text),'_blank','noopener');});
 document.getElementById('newsletter').addEventListener('submit',e=>{e.preventDefault();alert('Dziękujemy! To demonstracyjny formularz — przed publikacją należy podłączyć system newslettera.');e.currentTarget.reset();});
 document.getElementById('year').textContent=new Date().getFullYear();

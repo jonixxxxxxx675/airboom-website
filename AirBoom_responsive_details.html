@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="AirBoom — dekoracje balonowe w Bielsku-Białej i okolicach.">
+<title>AirBoom — Dekoracje z pasją</title>
+<style>
+:root{--pink:#d96d83;--rose:#f5dfe3;--ink:#19181b;--muted:#71696d;--cream:#faf6f4;--line:#e9e0df}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:78px}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink)}a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}.wrap{width:min(1180px,calc(100% - 40px));margin:auto}.serif{font-family:Georgia,serif;font-weight:500;letter-spacing:-.035em}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 22px;border-radius:40px;font-size:13px;font-weight:bold;border:1px solid transparent;cursor:pointer;transition:.2s}.primary{background:var(--pink);color:white}.primary:hover{background:#c65770;transform:translateY(-2px)}.outline{border-color:#ffffffa6;color:white;background:#ffffff12}.light{background:white;border-color:var(--line)}.top{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid #eee8e7}.nav{height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{font-size:25px;font-weight:bold;letter-spacing:-1.5px;white-space:nowrap}.logo span{color:var(--pink)}.logo small{display:block;font-size:8px;letter-spacing:3px;color:#777;text-align:center}.links{display:flex;gap:24px;font-size:12px;color:#514b4e}.links a:hover{color:var(--pink)}.navright{display:flex;gap:10px;align-items:center}.round{border:1px solid var(--line);width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-weight:bold}.menu{display:none;border:1px solid var(--line);background:white;border-radius:50%;width:42px;height:42px;font-size:21px}.mobile{display:none;padding:5px 0 16px}.mobile a{display:block;padding:12px;border-bottom:1px solid var(--line)}.mobile.open{display:block}
+.hero{min-height:510px;background:linear-gradient(90deg,#191817ed 0%,#211e1cce 44%,#33272163 100%),url('./assets/airboom-hero.jpg') center/cover;color:white;position:relative;overflow:hidden;border-radius:0 0 0 38px}.hero .wrap{min-height:510px;display:flex;align-items:center}.copy{max-width:620px;padding:55px 0}.eyebrow{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--pink);font-weight:bold}.hero .eyebrow{color:#f2b4c0}.hero h1{font-size:clamp(46px,6vw,76px);line-height:.98;margin:18px 0}.hero h1 em{font-style:normal;color:#f2a0b0}.hero p{max-width:470px;color:#eee2e0;line-height:1.7;font-size:15px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin:25px 0}.pills{display:flex;gap:25px;flex-wrap:wrap;margin-top:36px;font-size:12px;color:#f7e9e8}.pills b{font-size:22px;color:#f0b0bc;margin-right:8px}.badge{position:absolute;right:7%;top:14%;width:145px;height:145px;border:1px solid #ffffff9c;background:#d96d8345;border-radius:50%;display:grid;place-items:center;text-align:center;font:23px/1.1 Georgia;transform:rotate(8deg)}
+section{padding:70px 0}.heading{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:27px}.heading h2{font-size:clamp(30px,4vw,44px);line-height:1.05;margin:8px 0}.heading p{font-size:14px;color:var(--muted);margin:8px 0 0}.textlink{font-size:12px;font-weight:bold;white-space:nowrap}.textlink span{color:var(--pink);font-size:20px;margin-left:6px}
+.cards{display:grid;grid-template-columns:repeat(6,1fr);gap:13px}.cat{border:1px solid var(--line);border-radius:13px;overflow:hidden;cursor:pointer;transition:.2s;background:white}.cat:hover{transform:translateY(-4px);box-shadow:0 15px 35px #39232b16}.cat img{width:100%;height:150px;object-fit:cover;display:block}.catinfo{padding:12px;display:flex;align-items:center;justify-content:space-between;gap:7px}.cat h3{font-size:13px;margin:0 0 5px}.price{color:var(--pink);font-size:11px;font-weight:bold}.arrow{background:var(--pink);color:white;width:26px;height:26px;border-radius:50%;display:grid;place-items:center}
+.split{display:grid;grid-template-columns:.9fr 1.35fr .95fr;gap:22px}.why,.quote{background:var(--cream);padding:25px;border-radius:17px}.why h2,.quote h2{font-size:31px;line-height:1.05;margin:9px 0 22px}.reason{display:flex;gap:12px;margin:18px 0}.ico{height:38px;width:38px;border:1px solid #ded3d1;border-radius:50%;display:grid;place-items:center;font-size:21px;flex-shrink:0}.reason h3{font-size:13px;margin:2px 0 5px}.reason p{font-size:12px;color:var(--muted);line-height:1.5;margin:0}.gallery{display:grid;grid-template-columns:1.2fr 1fr 1fr;grid-template-rows:repeat(2,135px);gap:9px}.shot{padding:0;border:0;border-radius:10px;overflow:hidden;cursor:pointer;background:#eee}.shot:first-child{grid-row:span 2}.shot img{width:100%;height:100%;object-fit:cover;display:block;transition:.3s}.shot:hover img{transform:scale(1.06)}.field{width:100%;padding:12px 13px;border:1px solid #e6dcda;background:white;border-radius:8px;margin:5px 0;font-size:12px;outline:none}.field:focus{border-color:var(--pink);box-shadow:0 0 0 3px #d96d8320}textarea.field{min-height:82px;resize:vertical}.quote>p{font-size:12px;color:var(--muted);line-height:1.5}.quote button{width:100%;margin-top:6px}.status{display:none;font-size:12px;color:#a33d55;line-height:1.5;margin-top:10px}.reviews{background:#fbf8f7}.reviewgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.review{padding:22px;background:#fff;border:1px solid var(--line);border-radius:13px}.stars{color:#d9a144;letter-spacing:2px}.review blockquote{font:17px/1.45 Georgia,serif;margin:13px 0 20px}.review strong{font-size:12px}.review small{display:block;color:#888;font-size:11px;margin-top:4px}.cta{margin-top:25px;border-radius:15px;background:linear-gradient(100deg,#f6e1e5,#faf5f2);padding:25px 30px;display:flex;align-items:center;justify-content:space-between;gap:20px}.cta h3{font:28px Georgia,serif;margin:0 0 6px}.cta p{margin:0;color:var(--muted);font-size:12px}.footer{padding:45px 0 18px}.footgrid{display:grid;grid-template-columns:1.3fr .7fr 1fr 1.1fr;gap:30px}.footer h4{font-size:13px;margin:0 0 13px}.footer p,.footer a{font-size:12px;line-height:1.8;color:#71696d}.footer a{display:block}.footer a:hover{color:var(--pink)}.social{display:flex;gap:8px;margin-top:10px}.social a{width:29px;height:29px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;font-weight:bold}.newsletter{display:flex;gap:5px}.newsletter input{min-width:0;flex:1;border:1px solid var(--line);border-radius:30px;padding:11px;font-size:11px}.newsletter button{border:0;background:var(--pink);color:white;border-radius:50%;width:38px;cursor:pointer}.bottom{border-top:1px solid var(--line);padding-top:15px;margin-top:28px;display:flex;justify-content:space-between;gap:15px;font-size:10px;color:#898184}.lightbox{position:fixed;inset:0;background:#151216ed;z-index:30;display:none;align-items:center;justify-content:center;padding:20px}.lightbox.open{display:flex}.lightbox img{max-width:95%;max-height:85vh;border-radius:12px}.lightbox button{position:absolute;right:20px;top:20px;border:1px solid #fff8;background:#ffffff18;color:white;border-radius:50%;width:43px;height:43px;font-size:25px;cursor:pointer}
+@media(max-width:1000px){.links{gap:12px}.cards{grid-template-columns:repeat(3,1fr)}.split{grid-template-columns:1fr 1.2fr}.quote{grid-column:span 2}.footgrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.wrap{width:calc(100% - 30px)}.nav{height:64px}.links,.navright>.btn,.navright>.round{display:none}.menu{display:block}.hero,.hero .wrap{min-height:570px}.hero{background-position:center}.hero h1{font-size:clamp(45px,13vw,64px)}.hero p{font-size:14px}.badge{width:95px;height:95px;font-size:16px;right:5%;top:5%}.copy{padding:65px 0 38px}.pills{gap:14px;font-size:10px}.section{padding:50px 0}.heading{align-items:start;flex-direction:column}.heading h2{font-size:34px}.cards{grid-template-columns:repeat(2,1fr);gap:9px}.cat img{height:135px}.split{grid-template-columns:1fr;gap:15px}.quote{grid-column:auto}.gallery{grid-template-rows:repeat(2,110px);gap:7px}.reviewgrid{grid-template-columns:1fr}.cta{padding:23px;align-items:flex-start;flex-direction:column}.footgrid{grid-template-columns:1fr 1fr;gap:24px 15px}.footgrid>div:first-child,.footgrid>div:last-child{grid-column:1/-1}.bottom{flex-direction:column}}
+
+/* Category details open in a responsive in-page dialog instead of a tiny about:blank tab. */
+.detail-overlay{position:fixed;inset:0;z-index:100;background:rgba(20,18,20,.78);display:none;align-items:flex-start;justify-content:center;overflow-y:auto;padding:clamp(12px,4vw,36px)}
+.detail-overlay.open{display:flex}
+.detail-dialog{position:relative;width:min(860px,100%);margin:auto;background:#faf6f4;border-radius:18px;overflow:hidden;box-shadow:0 24px 80px #0005}
+.detail-close{position:absolute;z-index:2;top:12px;right:12px;width:42px;height:42px;border:1px solid #fff9;border-radius:50%;background:#19181bcc;color:white;font-size:27px;cursor:pointer}
+.detail-dialog>img{width:100%;height:clamp(210px,42vw,430px);object-fit:cover;display:block}
+.detail-content{padding:clamp(20px,5vw,44px)}
+.detail-content h2{font:500 clamp(30px,5vw,48px)/1.08 Georgia,serif;margin:12px 0 18px;color:#19181b}
+.detail-content p{font-size:15px;line-height:1.75;color:#71696d}
+.detail-content h3{font:500 26px Georgia,serif;margin:26px 0 12px}
+.detail-content ul{padding-left:22px;color:#514b4e;line-height:1.9}
+.detail-content .btn{margin-top:15px}
+@media(max-width:600px){.detail-overlay{padding:8px}.detail-dialog{border-radius:12px}.detail-content p{font-size:14px}}
+
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap nav">
+<a href="#home" class="logo" aria-label="AirBoom strona główna">Air<span>Boom</span><small>DEKORACJE Z PASJĄ</small></a>
+<nav class="links"><a href="#home">Strona główna</a><a href="#onas">O nas</a><a href="#oferta">Oferta</a><a href="#galeria">Galeria</a><a href="#opinie">Opinie</a><a href="#kontakt">Kontakt</a></nav>
+<div class="navright"><a class="btn primary" href="#wycena">Poproś o wycenę ↗</a><a class="round" href="https://instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram">◎</a><a class="round" href="https://wa.me/48517123456" target="_blank" rel="noreferrer" aria-label="WhatsApp">◉</a><a class="round" href="tel:+48517123456" aria-label="Telefon">⌕</a><button class="menu" id="menuBtn" aria-expanded="false" aria-label="Otwórz menu">☰</button></div>
+</div><nav class="mobile wrap" id="mobile"><a href="#home">Strona główna</a><a href="#onas">O nas</a><a href="#oferta">Oferta</a><a href="#galeria">Galeria</a><a href="#opinie">Opinie</a><a href="#kontakt">Kontakt</a><a href="#wycena">Poproś o wycenę ↗</a></nav></header>
+<main>
+<section class="hero" id="home"><div class="wrap"><div class="copy"><div class="eyebrow">Wyjątkowe chwile zasługują na piękną oprawę</div><h1 class="serif">Dekoracje<br>z balonów<br><em>Bielsko-Biała</em><br>i okolice</h1><p>Tworzymy dekoracje, które zostają w pamięci. Z pomysłem, starannością i pasją — na małe rodzinne uroczystości i wielkie wydarzenia.</p><div class="actions"><a class="btn primary" href="#wycena">Poproś o wycenę ↗</a><a class="btn outline" href="#galeria">Zobacz realizacje →</a></div><div class="pills"><div><b>◇</b> Nowoczesny<br> design</div><div><b>♡</b> Na każdą<br> okazję</div><div><b>♧</b> Bielsko-Biała<br> i okolice</div></div></div><div class="badge">Good<br>Vibes<br>Only ♡</div></div></section>
+<section id="oferta"><div class="wrap"><div class="heading"><div><div class="eyebrow">Nasza oferta</div><h2 class="serif">Dekoracje na każdą okazję</h2><p>Sprawdź popularne kategorie i zainspiruj się.</p></div><a class="textlink" href="#wycena">Zapytaj o własny projekt <span>→</span></a></div>
+<div class="cards">
+<article class="cat" data-occasion="Urodziny"><img loading="lazy" src="./assets/airboom-birthday.jpg" alt="Dekoracje na urodziny"><div class="catinfo"><div><h3>Urodziny</h3><div class="price">od 300 zł</div></div><span class="arrow">→</span></div></article>
+<article class="cat" data-occasion="Chrzest"><img loading="lazy" src="./assets/chrzest-airboom.png" alt="Dekoracje na chrzest"><div class="catinfo"><div><h3>Chrzest</h3><div class="price">od 250 zł</div></div><span class="arrow">→</span></div></article>
+<article class="cat" data-occasion="Roczek"><img loading="lazy" src="./assets/airboom-roczek.png" alt="Dekoracje na roczek"><div class="catinfo"><div><h3>Roczek</h3><div class="price">od 300 zł</div></div><span class="arrow">→</span></div></article>
+<article class="cat" data-occasion="Wesele"><img loading="lazy" src="./assets/airboom-wedding.png" alt="Dekoracje weselne"><div class="catinfo"><div><h3>Wesele</h3><div class="price">od 800 zł</div></div><span class="arrow">→</span></div></article>
+<article class="cat" data-occasion="Komunie"><img loading="lazy" src="./assets/airboom-komunia.png" alt="Dekoracje komunijne"><div class="catinfo"><div><h3>Komunie</h3><div class="price">od 500 zł</div></div><span class="arrow">→</span></div></article>
+<article class="cat" data-occasion="Event firmowy"><img loading="lazy" src="./assets/airboom-event-firmowy.png" alt="Dekoracje eventów firmowych"><div class="catinfo"><div><h3>Eventy firmowe</h3><div class="price">od 600 zł</div></div><span class="arrow">→</span></div></article>
+</div></div></section>
+<section id="onas" style="padding-top:0"><div class="wrap split">
+<div class="why"><div class="eyebrow">Dlaczego AirBoom?</div><h2 class="serif">Masz pomysł?<br>My go realizujemy!</h2>
+<div class="reason"><span class="ico">✧</span><div><h3>Kreatywne pomysły</h3><p>Niepowtarzalne aranżacje dopasowane do Twojej wizji.</p></div></div>
+<div class="reason"><span class="ico">♢</span><div><h3>Staranność i jakość</h3><p>Dbamy o detale, estetykę i spójny efekt końcowy.</p></div></div>
+<div class="reason"><span class="ico">⌖</span><div><h3>Bielsko-Biała i okolice</h3><p>Ustalamy szczegóły dojazdu i montażu indywidualnie.</p></div></div>
+<div class="reason"><span class="ico">♡</span><div><h3>Indywidualne podejście</h3><p>Każda uroczystość jest wyjątkowa — projektujemy z myślą o Tobie.</p></div></div></div>
+<div id="galeria"><div class="heading"><div><div class="eyebrow">Nasze realizacje</div><h2 class="serif">Galeria pełna inspiracji</h2><p>Pomysły na wyjątkową oprawę ważnych chwil.</p></div></div><div class="gallery">
+<button class="shot" data-img="./assets/chrzest-airboom.png" aria-label="Powiększ zdjęcie"><img loading="lazy" src="./assets/chrzest-airboom.png" alt="Dekoracja na chrzest"></button>
+<button class="shot" data-img="./assets/airboom-birthday.jpg" aria-label="Powiększ zdjęcie"><img loading="lazy" src="./assets/airboom-birthday.jpg" alt="Kolorowe dekoracje imprezowe"></button>
+<button class="shot" data-img="./assets/chrzest-airboom.png" aria-label="Powiększ zdjęcie"><img loading="lazy" src="./assets/chrzest-airboom.png" alt="Dekoracja przyjęcia"></button>
+<button class="shot" data-img="./assets/airboom-wedding.png" aria-label="Powiększ zdjęcie"><img loading="lazy" src="./assets/airboom-wedding.png" alt="Dekoracja weselna"></button>
+<button class="shot" data-img="./assets/airboom-event-firmowy.png" aria-label="Powiększ zdjęcie"><img loading="lazy" src="./assets/airboom-event-firmowy.png" alt="Dekoracja wydarzenia"></button>
+<button class="shot" data-img="./assets/airboom-komunia.png" aria-label="Powiększ zdjęcie"><img loading="lazy" src="./assets/airboom-komunia.png" alt="Dekoracja uroczystości"></button>
+</div></div>
+<div class="quote" id="wycena"><div class="eyebrow">Poproś o wycenę</div><h2 class="serif">Opowiedz nam<br>o swoim pomyśle</h2><p>Wypełnij formularz. Przygotujemy zapytanie do wysłania przez WhatsApp.</p>
+<form id="quoteForm"><input class="field" name="name" placeholder="Imię i nazwisko *" required maxlength="100"><input class="field" name="phone" type="tel" placeholder="Numer telefonu *" required maxlength="40"><input class="field" name="date" type="date" aria-label="Data wydarzenia"><select class="field" name="occasion"><option value="">Wybierz okazję</option><option>Urodziny</option><option>Chrzest</option><option>Roczek</option><option>Wesele</option><option>Komunie</option><option>Event firmowy</option><option>Inna okazja</option></select><textarea class="field" name="details" placeholder="Opisz krótko swoje potrzeby (miejsce, kolory, zakres)"></textarea><button class="btn primary" type="submit">Wyślij zapytanie ↗</button><div class="status" id="formStatus" role="status"></div></form></div>
+</div></section>
+<section class="reviews" id="opinie"><div class="wrap"><div class="heading"><div><div class="eyebrow">Opinie klientów</div><h2 class="serif">Co mówią o nas klienci?</h2><p>Zaufanie, zadowolenie i piękne wspomnienia — to nasza motywacja.</p></div><a class="textlink" href="#kontakt">Skontaktuj się <span>→</span></a></div><div class="reviewgrid">
+<article class="review"><div class="stars">★★★★★</div><blockquote>„Piękne dekoracje i świetny kontakt! Wszystko dopięte na ostatni guzik. Polecam z całego serca!”</blockquote><strong>Kasia</strong><small>Urodziny</small></article>
+<article class="review"><div class="stars">★★★★★</div><blockquote>„Profesjonalnie, terminowo i z ogromnym wyczuciem stylu. Nasze przyjęcie wyglądało magicznie.”</blockquote><strong>Marek</strong><small>Wesele</small></article>
+<article class="review"><div class="stars">★★★★★</div><blockquote>„Najpiękniejsza dekoracja na chrzest! Dziękujemy za zaangażowanie i super atmosferę.”</blockquote><strong>Anna</strong><small>Chrzest</small></article>
+</div><div class="cta"><div><h3>Masz pomysł? My go zrealizujemy!</h3><p>Stwórzmy razem dekorację, która wywoła uśmiech.</p></div><a class="btn primary" href="#wycena">Poproś o wycenę ↗</a></div></div></section>
+</main>
+<footer class="footer" id="kontakt"><div class="wrap"><div class="footgrid">
+<div><a class="logo" href="#home">Air<span>Boom</span><small>DEKORACJE Z PASJĄ</small></a><p>Dekoracje z balonów<br>Bielsko-Biała i okolice</p><div class="social"><a href="https://instagram.com/" target="_blank" rel="noreferrer">◎</a><a href="https://wa.me/48517123456" target="_blank" rel="noreferrer">◉</a><a href="https://facebook.com/" target="_blank" rel="noreferrer">f</a></div></div>
+<div><h4>Menu</h4><a href="#home">Strona główna</a><a href="#onas">O nas</a><a href="#oferta">Oferta</a><a href="#galeria">Galeria</a><a href="#opinie">Opinie</a><a href="#kontakt">Kontakt</a></div>
+<div><h4>Kontakt</h4><a href="tel:+48517123456">☎ +48 517 123 456</a><a href="mailto:kontakt@airboom.pl">✉ kontakt@airboom.pl</a><p>⌖ Bielsko-Biała i okolice</p></div>
+<div><h4>Bądź na bieżąco!</h4><p>Zapisz się do newslettera, aby otrzymywać inspiracje i nowości.</p><form class="newsletter" id="newsletter"><input type="email" required placeholder="Twój e-mail" aria-label="Twój e-mail"><button type="submit" aria-label="Zapisz się">→</button></form></div>
+</div><div class="bottom"><span>© <span id="year"></span> AirBoom. Wszelkie prawa zastrzeżone.</span><span>Realizacja: Beego Digital · IDEAS MOVE BUSINESS.</span></div></div></footer>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Podgląd zdjęcia"><button id="closeLightbox" aria-label="Zamknij">×</button><img id="largeImg" alt="Powiększone zdjęcie dekoracji"></div>
+
+<div class="detail-overlay" id="detailOverlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="detailTitle">
+  <article class="detail-dialog">
+    <button class="detail-close" id="detailClose" type="button" aria-label="Zamknij">×</button>
+    <img id="detailImage" src="" alt="">
+    <div class="detail-content">
+      <div class="eyebrow">AirBoom · Bielsko-Biała i okolice</div>
+      <h2 id="detailTitle"></h2>
+      <p id="detailDescription"></p>
+      <h3>Co możemy przygotować?</h3>
+      <ul id="detailList"></ul>
+      <p>Każdy projekt wyceniamy indywidualnie. Skontaktuj się z nami, aby omówić szczegóły swojej uroczystości.</p>
+      <a class="btn primary" id="detailQuote" href="#wycena">Poproś o wycenę ↗</a>
+    </div>
+  </article>
+</div>
+
+<script>
+const menuBtn=document.getElementById('menuBtn'),mobile=document.getElementById('mobile');
+menuBtn.addEventListener('click',()=>{let opened=mobile.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(opened));menuBtn.textContent=opened?'×':'☰';});
+mobile.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mobile.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.textContent='☰';}));
+const lb=document.getElementById('lightbox'),large=document.getElementById('largeImg');
+document.querySelectorAll('.shot').forEach(b=>b.addEventListener('click',()=>{large.src=b.dataset.img;lb.classList.add('open');document.body.style.overflow='hidden';}));
+function closeLb(){lb.classList.remove('open');large.src='';document.body.style.overflow='';}
+document.getElementById('closeLightbox').addEventListener('click',closeLb);lb.addEventListener('click',e=>{if(e.target===lb)closeLb();});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLb();});
+const eventDetails = {
+  "Urodziny": { title: "Dekoracje na urodziny", description: "Stwórz wyjątkową oprawę urodzinową. Przygotowujemy dekoracje balonowe dopasowane do wieku, stylu przyjęcia, wybranej kolorystyki i Twojego pomysłu.", details: ["Dekoracje balonowe dopasowane do motywu przyjęcia", "Personalizowane aranżacje i kompozycje", "Dobór kolorów, dodatków i stylu dekoracji", "Indywidualna wycena zależna od projektu"] },
+  "Chrzest": { title: "Dekoracje na chrzest", description: "Eleganckie i subtelne dekoracje balonowe na uroczystość Chrztu Świętego. Projektujemy aranżacje, które podkreślają wyjątkowy charakter tego dnia.", details: ["Delikatne kompozycje balonowe", "Dekoracje w wybranej kolorystyce", "Aranżacje dopasowane do miejsca uroczystości", "Indywidualna wycena zależna od projektu"] },
+  "Roczek": { title: "Dekoracje na roczek", description: "Pierwsze urodziny zasługują na wyjątkową oprawę. Tworzymy dekoracje balonowe, które nadają przyjęciu dziecięcy, radosny i niepowtarzalny charakter.", details: ["Dekoracje z motywem pierwszych urodzin", "Kompozycje balonowe i dopasowane dodatki", "Kolory oraz styl dopasowane do przyjęcia", "Indywidualna wycena zależna od projektu"] },
+  "Wesele": { title: "Dekoracje weselne", description: "Podkreśl wyjątkowy charakter Waszego dnia dzięki eleganckim dekoracjom balonowym. Dopasujemy aranżację do stylu sali, kolorystyki i wizji uroczystości.", details: ["Eleganckie kompozycje balonowe", "Dekoracje dopasowane do stylu wesela", "Aranżacje do sali i wybranych stref", "Indywidualna wycena zależna od projektu"] },
+  "Komunie": { title: "Dekoracje komunijne", description: "Subtelne i eleganckie dekoracje balonowe na przyjęcie komunijne. Przygotowujemy aranżacje dopasowane do charakteru uroczystości i wybranej kolorystyki.", details: ["Eleganckie dekoracje balonowe", "Kompozycje w jasnych i wybranych kolorach", "Aranżacje dopasowane do miejsca przyjęcia", "Indywidualna wycena zależna od projektu"] },
+  "Event firmowy": { title: "Dekoracje na eventy firmowe", description: "Dekoracje balonowe na wydarzenia firmowe, spotkania, otwarcia i uroczystości. Dopasowujemy aranżacje do charakteru wydarzenia oraz identyfikacji wizualnej marki.", details: ["Dekoracje dopasowane do charakteru wydarzenia", "Możliwość dopasowania kolorystyki do marki", "Aranżacje do wybranych stref eventowych", "Indywidualna wycena zależna od projektu"] }
+};
+
+const detailOverlay=document.getElementById('detailOverlay');
+const closeDetail=()=>{detailOverlay.classList.remove('open');detailOverlay.setAttribute('aria-hidden','true');document.body.style.overflow='';};
+document.querySelectorAll('.cat').forEach(card=>{
+  card.addEventListener('click',()=>{
+    const occasion=card.dataset.occasion;
+    const event=eventDetails[occasion];
+    if(!event)return;
+    const image=card.querySelector('img');
+    document.getElementById('detailImage').src=image.getAttribute('src');
+    document.getElementById('detailImage').alt=image.alt||event.title;
+    document.getElementById('detailTitle').textContent=event.title;
+    document.getElementById('detailDescription').textContent=event.description;
+    const list=document.getElementById('detailList');list.replaceChildren();
+    event.details.forEach(text=>{const li=document.createElement('li');li.textContent=text;list.appendChild(li);});
+    const message=encodeURIComponent(`Dzień dobry! Proszę o wycenę dekoracji AirBoom.\nOkazja: ${occasion}`);
+    document.getElementById('detailQuote').href='https://wa.me/48517123456?text='+message;
+    document.getElementById('detailQuote').target='_blank';
+    document.getElementById('detailQuote').rel='noreferrer';
+    detailOverlay.classList.add('open');detailOverlay.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';
+    document.getElementById('detailClose').focus();
+  });
+});
+document.getElementById('detailClose').addEventListener('click',closeDetail);
+detailOverlay.addEventListener('click',e=>{if(e.target===detailOverlay)closeDetail();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&detailOverlay.classList.contains('open'))closeDetail();});
+document.getElementById('quoteForm').addEventListener('submit',e=>{e.preventDefault();let d=new FormData(e.currentTarget);let text=`Dzień dobry! Proszę o wycenę dekoracji AirBoom.\nImię: ${d.get('name')}\nTelefon: ${d.get('phone')}\nOkazja: ${d.get('occasion')||'nie podano'}\nData: ${d.get('date')||'nie podano'}\nSzczegóły: ${d.get('details')||'nie podano'}`;let status=document.getElementById('formStatus');status.style.display='block';status.textContent='Otwieramy WhatsApp z przygotowaną wiadomością. Sprawdź jej treść i naciśnij Wyślij.';window.open('https://wa.me/48517123456?text='+encodeURIComponent(text),'_blank','noopener');});
+document.getElementById('newsletter').addEventListener('submit',e=>{e.preventDefault();alert('Dziękujemy! To demonstracyjny formularz — przed publikacją należy podłączyć system newslettera.');e.currentTarget.reset();});
+document.getElementById('year').textContent=new Date().getFullYear();
+</script></body></html>
